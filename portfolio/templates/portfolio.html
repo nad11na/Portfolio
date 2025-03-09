@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+
+{% block page_title %}
+    MY BEST WORKS
+{% endblock %}
+
+{% block content %}
+<section id="experience-summary" class="experience-summary">
+    <div class="experience-summary-content">
+        <h2>My Journey in Computer Science</h2>
+        <p>
+            Much of my experience in computer science has been shaped by my academic journey and practical application through my personal projects. At university, I received training in software engineering, programming, 3D design, computer networking, and database administration. I gained a strong foundation in developing applied software systems, designing and managing databases, and utilizing modern information technologies for system development and integration.
+        </p>
+        <p>
+            Beyond academics, I applied my knowledge by developing STAYinTouch, a web-based information system designed to streamline operations for online language schools. Through this project, I worked extensively with Flask, SQLAlchemy, database management, and system architecture to create a platform for student management, lesson tracking, and communication. This hands-on experience deepened my understanding of web development, system design, and real-world database optimization while allowing me to integrate modern information processing and networking technologies.
+        </p>
+        <p>
+            My experience has equipped me with the ability to develop and manage computer systems, networks, and information resources while continuously refining my problem-solving and technical skills. I am eager to further explore innovative IT solutions and contribute to impactful projects.
+        </p>
+    </div>
+</section>
+<section id="project-showcase" class="project-showcase">
+    <div class="project-showcase-content">
+        <!-- Slideshow Section for Project Screenshots -->
+        <div class="slideshow-container">
+            <div class="slides">
+                <img src="{{ url_for('static', filename='images/screenshot1.png') }}" alt="Project Screenshot 1">
+                <img src="{{ url_for('static', filename='images/screenshot2.png') }}" alt="Project Screenshot 2">
+                <img src="{{ url_for('static', filename='images/screenshot3.png') }}" alt="Project Screenshot 3">
+                <img src="{{ url_for('static', filename='images/screenshot4.png') }}" alt="Project Screenshot 4">
+                <img src="{{ url_for('static', filename='images/screenshot5.png') }}" alt="Project Screenshot 5">
+                <img src="{{ url_for('static', filename='images/screenshot6.png') }}" alt="Project Screenshot 6">
+                <img src="{{ url_for('static', filename='images/screenshot7.png') }}" alt="Project Screenshot 7">
+                <img src="{{ url_for('static', filename='images/screenshot8.png') }}" alt="Project Screenshot 8">
+                <img src="{{ url_for('static', filename='images/screenshot9.png') }}" alt="Project Screenshot 9">
+                <img src="{{ url_for('static', filename='images/screenshot10.png') }}" alt="Project Screenshot 10">
+                <img src="{{ url_for('static', filename='images/screenshot11.png') }}" alt="Project Screenshot 11">
+                <img src="{{ url_for('static', filename='images/screenshot12.png') }}" alt="Project Screenshot 12">
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+
+            <!-- Progress Dots -->
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+                <span class="dot" onclick="currentSlide(9)"></span>
+                <span class="dot" onclick="currentSlide(10)"></span>
+                <span class="dot" onclick="currentSlide(11)"></span>
+                <span class="dot" onclick="currentSlide(12)"></span>
+            </div>
+        </div>
+
+        
+        <div class="project-description">
+            <h2>STAYinTouch Project</h2>
+            <p>
+                STAYinTouch is a comprehensive web-based platform designed to streamline the management of an online language school. The system provides administrators with tools to efficiently manage students, teachers, courses, and payments, while also offering an intuitive user experience for students to access lessons, track progress, and communicate with instructors.
+            </p>
+        
+            <!-- Key Features Section -->
+            <div class="text-block">
+                <p><strong>Key features include:</strong></p>
+                <ul>
+                    <li><strong>Dual-Database Architecture:</strong> Separate databases for administrators and users ensure data integrity and security while allowing seamless information exchange.</li>
+                    <li><strong>Student & Teacher Management:</strong> Administrators can enroll students, assign teachers, monitor progress, and track attendance.</li>
+                    <li><strong>Payment Tracking System:</strong> Automates tuition fee tracking, displaying outstanding balances and due dates.</li>
+                    <li><strong>Course & Lesson Scheduling:</strong> Enables structured course creation, lesson assignments, and progress tracking.</li>
+                    <li><strong>Messaging System:</strong> Facilitates direct communication between students and administrators within the same interface.</li>
+                    <li><strong>User Authentication & Role Management:</strong> Secure login and role-based access control for administrators, teachers, and students.</li>
+                </ul>
+            </div>
+        
+            <!-- Technologies Used Section -->
+            <div class="text-block">
+                <p><strong>Technologies Used:</strong></p>
+                <ul>
+                    <li><strong>Backend:</strong> Python, Flask, Flask-SQLAlchemy, Flask-Migrate, Flask-Login, Flask-Mail</li>
+                    <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+                    <li><strong>Database:</strong> SQLite with SQLAlchemy ORM</li>
+                    <li><strong>Additional Tools:</strong> Alembic for database migrations, dotenv for environment configuration</li>
+                </ul>
+            </div>
+        
+            <!-- Development Highlights Section -->
+            <div class="text-block">
+                <p><strong>Development Highlights:</strong></p>
+                <ul>
+                    <li>Designed and implemented a relational database structure optimized for educational workflows.</li>
+                    <li>Developed an admin dashboard with real-time student progress tracking and financial insights.</li>
+                    <li>Integrated an email notification system for automated reminders and communication.</li>
+                    <li>Built an intuitive UI/UX experience to enhance the accessibility of educational materials.</li>
+                </ul>
+            </div>
+        
+            <!-- Impact Section -->
+            <div class="text-block">
+                <p><strong>Impact:</strong></p>
+                <p>
+                    STAYinTouch simplifies administrative tasks, enhances learning experiences, and fosters better engagement between students and educators. Its robust architecture ensures scalability and adaptability, making it a valuable tool for online education providers.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

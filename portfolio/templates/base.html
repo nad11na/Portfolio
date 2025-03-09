@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nadiia Sierova</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon-16x16.png') }}">
+
+    <!-- Android Icons -->
+    <link rel="icon" sizes="192x192" href="{{ url_for('static', filename='images/android-chrome-192x192.png') }}">
+    <link rel="icon" sizes="384x384" href="{{ url_for('static', filename='images/android-chrome-512x512.png') }}">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+    
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Link External JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1>Nadiia Sierova</h1>
+            <ul>
+                <li><a href="{{ url_for('main.home') }}">Main Page</a></li>
+                <li><a href="{{ url_for('main.about') }}">About Me</a></li>
+                <li><a href="{{ url_for('main.portfolio') }}">Some of My Best Work</a></li>
+            </ul>
+        </div>
+        <div class="nav-page-title">
+            <h2>{% block page_title %}{% endblock %}</h2> 
+        </div>
+        <div class="underline"></div>
+    </nav>
+    
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>E-mail: <a href="mailto:serova19099@gmail.com">serova19099@gmail.com</a></p>
+        <p>Telephone: <a href="tel:+447454819926">+44 7454 819926</a></p>
+    </footer>
+    
+</body>
+</html>
+

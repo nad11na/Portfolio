@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+{% block page_title %}
+    ABOUT ME
+{% endblock %}
+
+{% block content %}
+    <div class="about-container">
+        <div class="about-left">
+            <img src="{{ url_for('static', filename='images/my_photo2.jpg') }}" alt="Nadiia Sierova">
+        </div>
+        <div class="about-right">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I am a passionate and dedicated individual with a deep interest in technology and design. 
+                </p>
+                <p>Outside of my professional life, I enjoy dancing and stay active in creative pursuits. Throughout my journey in Ukraine, I have always been engaged in various activities at school, college, and university, where I actively contributed to the community.</p>
+            </div>
+            <div class="about-image">
+                <img id="slideshow" src="{{ url_for('static', filename='images/hobby1.jpg') }}" alt="My hobby">
+                <div id="next-arrow" class="next-arrow">→</div>
+            </div>
+        </div>
+    </div>
+    <div class="container2">
+        <!-- Separate Section for Personal Dance Video -->
+        <div class="personal-dance">
+            <div class="text-box">
+                <p>Dancing is my passion, and in my free time, I love to express myself through movement. Here’s a glimpse of me dancing professionally:</p>
+            </div>
+            <div class="video-box">
+                <video id="video2" class="custom-video" poster="{{ url_for('static', filename='images/dance_thumbnail.png') }}">
+                    <source src="{{ url_for('static', filename='videos/dance.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <div class="play-button" onclick="togglePlayPause('video2')">▶</div>
+                <div class="video-controls">
+                    <button class="control-btn play-pause-btn" onclick="togglePlayPause('video2')">⏯</button>
+                    <button class="control-btn mute-btn" onclick="toggleMute('video2')">🔇</button>
+                    <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="1" oninput="setVolume('video2', this.value)">
+                    <input type="range" class="progress-bar" min="0" max="100" step="1" value="0" oninput="seekVideo('video2', this.value)">
+                    <button class="control-btn fullscreen-btn" onclick="toggleFullscreen('video2')">⛶</button>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="left-side">
+            <div class="text-box">
+                <p>In 2019, I began organizing dance events in Sumy, bringing together over 100 participants to celebrate movement and community.</p>
+            </div>
+            <div class="video-box">
+                <video id="video1" class="custom-video" poster="{{ url_for('static', filename='images/dance_event_thumbnail.png') }}">
+                    <source src="{{ url_for('static', filename='videos/dance_event.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <div class="play-button" onclick="togglePlayPause('video1')">▶</div>
+                <div class="video-controls">
+                    <button class="control-btn play-pause-btn" onclick="togglePlayPause('video1')">⏯</button>
+                    <button class="control-btn mute-btn" onclick="toggleMute('video1')">🔇</button>
+                    <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="1" oninput="setVolume('video1', this.value)">
+                    <input type="range" class="progress-bar" min="0" max="100" step="1" value="0" oninput="seekVideo('video1', this.value)">
+                    <button class="control-btn fullscreen-btn" onclick="toggleFullscreen('video1')">⛶</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="education-container">
+        <h2 class="education-title">EDUCATION</h2>
+        <div class="education-text">
+            <!-- Education Entry 1 -->
+            <div class="education-entry">
+                <div class="education-icon">🎓</div>
+                <div class="education-details">
+                    <p class="upper-text">In 2014, I enrolled at Putyvl Pedagogical College.</p>
+                    <p class="lower-text"><strong>Specialty:</strong> Pedagogy</p>
+                    <p class="lower-text"><strong>Degree Program:</strong> Primary Education Teacher, Conductor of Children's Choral Group</p>
+                </div>
+            </div>
+    
+            <!-- Education Entry 2 -->
+            <div class="education-entry">
+                <div class="education-icon">🎓</div>
+                <div class="education-details">
+                    <p class="upper-text">After graduating in 2018, I entered the second year of a BA degree at Sumy State University.</p>
+                    <p class="lower-text"><strong>Specialty:</strong> Philology</p>
+                    <p class="lower-text"><strong>Degree Program:</strong> Germanic Languages and Literature (Translation included), First Language - English</p>
+                </div>
+            </div>
+    
+            <!-- Education Entry 3 -->
+            <div class="education-entry">
+                <div class="education-icon">🎓</div>
+                <div class="education-details">
+                    <p class="upper-text">In 2021, I graduated and won a state scholarship to pursue a Master's degree in the same field at Sumy State University.</p>
+                    <p class="lower-text">I successfully graduated in December 2022.</p>
+                </div>
+            </div>
+    
+            <!-- Education Entry 4 -->
+            <div class="education-entry">
+                <div class="education-icon">🎓</div>
+                <div class="education-details">
+                    <p class="upper-text">During my studies, I developed an interest in the IT field and enrolled at Sumy State University in 2023 as a software engineering student.</p>
+                    <p class="lower-text">Graduated in February 2025.</p>
+                    <p class="lower-text"><strong>Specialty:</strong> Computer Science</p>
+                    <p class="lower-text"><strong>Degree Program:</strong> Information Technology Design</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="certificates-container">
+        <!-- Text Section -->
+        <div class="certificates-text">
+            <h2>CERTIFICATES</h2>
+            <p>
+                To enhance my skills in computing, I completed the following courses on Coursera and Udemy:
+                <strong>Design Patterns</strong>, <strong>Create an Employee Feedback Survey with TypeForm</strong>,
+                <strong>Create a Customer Satisfaction Survey in Qualtrics</strong>, <strong>Create Customer Support Data with Google Sheets</strong>,
+                <strong>Create a Customer Service Survey in Microsoft Forms</strong>, <strong>Java Design Patterns and SOLID Design Principles</strong>,
+                and <strong>UML Class Diagrams for Programmers</strong>.
+            </p>
+        </div>
+    
+        <!-- Slideshow Section -->
+        <div class="slideshow-container">
+            <!-- Slides -->
+            <div class="slides">
+                <img src="{{ url_for('static', filename='images/certificate1.jpg') }}" alt="Certificate 1">
+                <img src="{{ url_for('static', filename='images/certificate2.jpg') }}" alt="Certificate 2">
+                <img src="{{ url_for('static', filename='images/certificate3.jpg') }}" alt="Certificate 3">
+                <img src="{{ url_for('static', filename='images/certificate4.jpg') }}" alt="Certificate 4">
+                <img src="{{ url_for('static', filename='images/certificate5.jpg') }}" alt="Certificate 5">
+                <img src="{{ url_for('static', filename='images/certificate6.jpg') }}" alt="Certificate 6">
+                <img src="{{ url_for('static', filename='images/certificate7.jpg') }}" alt="Certificate 7">
+            </div>
+            
+    
+            <!-- Navigation Arrows -->
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    
+            <!-- Progress Dots -->
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+            </div>
+        </div>
+    </div>
+    <div class="work-container">
+        <div class="work-title">WORK EXPERIENCE</div>
+        <div class="work-content">
+            <p class="experience-text">My first step into the world of technology began in 2021 when I became an IT Teaching Assistant at Putyvl Educational Complex, Gymnasium. In this role, I developed proficiency in various IT tools, software, and technologies while assisting students with their technical needs. Troubleshooting issues, optimizing digital learning environments, and helping students navigate complex systems allowed me to refine my problem-solving skills and deepen my technical expertise.</p>
+            
+            <p class="experience-text">Beyond my formal roles, I have always been passionate about leveraging technology for education. This passion led me to develop STAYinTouch, a web-based information system designed to support online language schools. Through this project, I gained hands-on experience in web development, database management, and system integration. I worked extensively with Flask, SQLAlchemy, and other technologies to create a platform that streamlines student management, lesson tracking, and communication between teachers and learners.</p>
+            
+            <p class="experience-text">My journey has been shaped by continuous learning and real-world application of IT solutions. With experience spanning educational technology, web development, and system administration, I am eager to continue growing and contributing to innovative projects in the tech space.</p>
+        </div>
+    </div>
+    
+{% endblock %}
