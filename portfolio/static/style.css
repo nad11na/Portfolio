@@ -173,7 +173,7 @@ nav {
 
 .social-icon {
     color: #fff;
-    font-size: 20px;
+    font-size: 23px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -334,13 +334,13 @@ footer a:hover {
 .about-me ul {
     list-style: none;
     padding: 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.8; /* Increased line height for better readability */
     margin-bottom: 20px;
 }
 
 .about-me ul li::before {
-    content: "\2713"; /* Checkmark */
+    content: "\2713"; 
     color: #ff4500;
     font-weight: bold;
     margin-right: 10px;
@@ -349,12 +349,12 @@ footer a:hover {
 .about-me p {
     font-size: 1.2rem;
     line-height: 1.8;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .about-me a {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 8px 20px;
     font-size: 1.2rem;
     color: #000; 
     background: #ff4500;
@@ -425,7 +425,7 @@ footer a:hover {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background: black;
+    background: #222;
     color: white;
     display: flex;
     align-items: center;
@@ -446,6 +446,8 @@ footer a:hover {
 /* Hover Effect - Flip Animation */
 .flip-container:hover .flipper {
     transform: rotateY(180deg);
+    box-shadow: 0 8px 20px rgba(255, 99, 71, 0.6); 
+    border-radius: 15px;
 }
 
 
@@ -690,27 +692,13 @@ li {
     margin-top: 140px;
 }
 
+/* Adjust the order of the sections */
 .about-left {
     flex: 1;
     display: flex;
     justify-content: center;
-    transition: transform 0.5s ease; /* Smooth transition for scaling */
+    align-items: center;
 }
-
-.about-left img {
-    width: 80%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.5s ease, border 0.5s ease; /* Smooth transition for scaling and border */
-}
-
-/* Hover effect on the image */
-.about-left:hover img {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(255, 99, 71, 0.6); 
-}
-
 
 .about-right {
     flex: 1;
@@ -721,16 +709,13 @@ li {
 }
 
 .about-right .about-text {
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Add opacity transition for smoother effect */
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .about-right:hover .about-text {
-    transform: translateY(-10px); /* Move the text up when hovered */
-    opacity: 0.9; 
-    
+    transform: translateY(-10px);
+    opacity: 0.9;
 }
-
-
 
 .about-text {
     text-align: left;
@@ -739,9 +724,8 @@ li {
 }
 
 .about-text p {
-    margin-bottom: 20px; /* Add space between paragraphs */
+    margin-bottom: 20px;
 }
-
 
 .about-image {
     position: relative;
@@ -750,51 +734,45 @@ li {
 }
 
 .about-image:hover {
-    box-shadow: 0 8px 20px rgba(255, 99, 71, 0.6); 
+    box-shadow: 0 8px 20px rgba(255, 99, 71, 0.6);
 }
 
 #slideshow {
     width: 100%;
-    max-width: 600px; /* Increase max width */
-    height: auto; /* Ensure aspect ratio is maintained */
+    max-width: 600px;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     transition: opacity 0.3s ease-in-out;
-    display: block; /* Ensure correct positioning */
+    display: block;
 }
 
-/* Right arrow styling */
-/* Right arrow styling */
 .next-arrow {
     position: absolute;
     top: 50%;
-    right: 5%; /* Adjusted for better alignment */
+    right: 5%;
     transform: translateY(-50%);
     font-size: 2rem;
-    color: rgba(255, 255, 255, 0.9); /* More visible */
-    
-    border-radius: 50%; /* Circular shape */
-    width: 50px; /* Fixed size */
-    height: 50px; /* Fixed size */
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    opacity: 0; /* Hidden by default */
+    opacity: 0;
     transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Show the arrow when hovering over the image */
 .about-image:hover .next-arrow {
     opacity: 1;
 }
 
-/* Hover effect for the arrow */
 .next-arrow:hover {
-    
-    color: rgba(255, 255, 255, 1); /* Fully opaque white on hover */
-    transform: translateY(-50%) scale(1.1); /* Slightly enlarge on hover */
+    color: rgba(255, 255, 255, 1);
+    transform: translateY(-50%) scale(1.1);
     transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
@@ -807,6 +785,8 @@ li {
     align-items: center;
     padding: 40px 10%;
     gap: 40px;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 /* Styling for the left-side (which is now on the right) */
