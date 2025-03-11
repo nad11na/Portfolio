@@ -1,28 +1,48 @@
 {% extends "base.html" %}
 
 {% block page_title %}
-    MAIN PAGE
+
 {% endblock %}
 
 {% block content %}
-    <div class="intro-container">
-        <div class="text-section">
-            <h2>Nadiia Sierova, Programmer from London</h2>
-        </div>
-        <div class="image-section">
-            <div class="flip-container">
-                <div class="flipper">
-                    <div class="front">
-                        <img src="{{ url_for('static', filename='images/my_photo.jpg') }}" alt="Nadiia Sierova Front">
-                    </div>
-                    <div class="back">
-                        <img src="{{ url_for('static', filename='images/my_photo_back.jpg') }}" alt="Nadiia Sierova Back">
+
+
+<div class="about-me">
+    <div class="text-section">
+        
+        <ul>
+            <li><strong>Backend Development:</strong> Python (Flask, SQLAlchemy), Java, JavaScript</li>
+            <li><strong>Database Management:</strong> SQL, SQLite, Flask-SQLAlchemy</li>
+            <li><strong>System Integration & API Development</strong></li>
+            <li><strong>Data Analysis & Visualization:</strong> Pandas, Matplotlib</li>
+            <li><strong>Problem-Solving & Technical Troubleshooting</strong></li>
+        </ul>
+        <p>Passionate about creating <strong>seamless digital experiences</strong> to improve <strong>education through technology</strong>.</p>
+        <a href="{{ url_for('main.about') }}">About Me</a>
+    </div>
+
+    <div class="image-section">
+        <div class="flip-container">
+            <div class="flipper">
+                <!-- Front Side (Your Photo) -->
+                <div class="front">
+                    <img src="{{ url_for('static', filename='images/my_photo.jpg') }}" alt="Nadiia Sierova Front">
+                </div>
+    
+                <!-- Back Side (Black Background with Text) -->
+                <div class="back">
+                    <div class="back-content">
+                        🚀 <strong>IT Professional | Backend Developer | System Designer</strong>
                     </div>
                 </div>
             </div>
         </div>
-        
     </div>
+    
+</div>
+
+
+
     <div class="text-section1">
         <div class="upper-text">
             COMPUTER SCIENCE GRADUATE | SUMY STATE UNIVERSITY, SUMY, UKRAINE
@@ -170,5 +190,7 @@
         
     </section>
 
-    
+    <div class="text-section">
+            <h2>Nadiia Sierova, Programmer from London</h2>
+    </div>
 {% endblock %}

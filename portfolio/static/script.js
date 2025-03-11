@@ -6,16 +6,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", function () {
         if (window.scrollY > 50) {
+            navbar.classList.add("shrink");
             pageTitle.classList.add("hidden-title");
             underline.classList.add("hidden-underline");
-            navbar.style.padding = "10px 0"; /* Shrink navbar */
         } else {
+            navbar.classList.remove("shrink");
             pageTitle.classList.remove("hidden-title");
             underline.classList.remove("hidden-underline");
-            navbar.style.padding = "20px 0"; /* Restore navbar size */
         }
     });
 });
+
+
 
 // animation left-right
 document.addEventListener("DOMContentLoaded", function () {
@@ -44,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const images = [
         "/static/images/hobby1.jpg",
-        "/static/images/hobby.jpg" // Make sure this matches your actual filename
+        "/static/images/hobby.jpg" 
     ];
     let currentIndex = 0;
 

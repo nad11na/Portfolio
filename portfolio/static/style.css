@@ -22,68 +22,223 @@ body {
     align-items: center;
 }
 
+.main-content {
+    margin-top: 140px; 
+    padding: 20px;
+}
+
+/* Navigation Bar */
 /* Navigation Bar */
 nav {
-    background-color: #222; /* Dark grey for nav */
+    background-color: #222;
     color: #fff;
     padding: 20px 0;
-    border-bottom: 3px solid #ff4500; /* Red-orange border */
+    border-bottom: 3px solid #ff4500;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; 
-    transition: padding 0.3s ease;
+    z-index: 1000;
+    text-align: center;
+    transition: padding 0.3s ease, height 0.3s ease, font-size 0.3s ease;
+    height: auto;
 }
 
-nav h1 {
-    float: left;
-    margin-left: 30px;
-    padding-left: 0;
+.nav-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: flex-direction 0.3s ease;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff4500;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.profile h1 {
+    font-size: 22px;
+    color: #ff4500;
+    margin-top: 8px;
+    transition: font-size 0.3s ease;
+}
+
+.profile p {
+    font-size: 14px;
+    color: #ccc;
     margin-top: 5px;
-    font-size: 25px;
-    color: #ff4500; /* Red-orange color for the name */
+    transition: font-size 0.3s ease;
 }
 
-nav ul {
-    float: right;
+/* Navigation Links */
+.nav-links {
     list-style: none;
-    margin-top: 5px;
-    margin-right: 140px;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+    transition: margin-top 0.3s ease, gap 0.3s ease;
+    max-height: 50px; /* Prevent overflow */
+    overflow: hidden; /* Hide overflow */
 }
 
-nav ul li {
+.nav-links li {
     display: inline;
-    margin-left: 20px;
 }
 
-nav ul li a {
+.nav-links a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    font-size: 19px;
+    transition: color 0.3s ease, font-size 0.3s ease;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    padding: 5px 10px;
 }
 
-nav ul li a:hover {
-    color: #ff4500; /* Red-orange color on hover */
-}
-
-/* Main Content Area */
-main {
-    padding: 20px 0;
-}
-
-
-
-/* Links */
-a {
+.nav-links a:hover {
     color: #ff4500;
-    text-decoration: none;
 }
 
-a:hover {
-    text-decoration: none;
+/* Highlight active page */
+.nav-links a.active {
+    color: #ff4500;
+    font-weight: bold;
 }
+
+
+/* Page Title */
+.nav-page-title {
+    text-align: center;
+    padding: 0px 0;
+    background-color: #222;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    max-height: 50px;
+    overflow: hidden;
+   
+}
+
+.nav-page-title h2  {
+    border-bottom: none;
+    color: #ffffff;
+}
+
+/* Underline */
+.underline {
+    width: 180px;
+    height: 5px;
+    background-color: #ff4500;
+    border-radius: 5px;
+    margin: 0 auto;
+    transition: opacity 0.5s ease;
+}
+
+.hidden-underline {
+    opacity: 0;
+}
+
+.hidden-title {
+    opacity: 0;
+    max-height: 0;
+}
+
+/* Social Media Buttons */
+.social-media {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ff4500;
+    transform: scale(1.1);
+}
+
+/* Shrunk Navbar */
+/* Shrunk Navbar */
+nav.shrink {
+    padding: 10px 0;
+    height: 60px;
+    transition: padding 0.3s ease, height 0.3s ease; /* Smooth padding and height transition */
+}
+
+nav.shrink .nav-content {
+    flex-direction: row; /* Align profile and links horizontally */
+    justify-content: space-between; /* Space out profile and links */
+    align-items: center; /* Center vertically */
+    transition: flex-direction 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
+}
+
+nav.shrink .profile {
+    transform: scale(0.8); /* Shrink profile */
+    opacity: 1; /* Keep visible */
+    margin-bottom: 0; /* Remove extra spacing */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for profile */
+}
+
+nav.shrink .profile-photo {
+    width: 50px; /* Smaller profile photo */
+    height: 50px;
+    transition: width 0.3s ease, height 0.3s ease; /* Smooth transition for photo size */
+}
+
+nav.shrink .profile h1 {
+    font-size: 18px; /* Smaller font size */
+    transition: font-size 0.3s ease; /* Smooth font size transition */
+}
+
+nav.shrink .profile p {
+    font-size: 12px; /* Smaller font size */
+    transition: font-size 0.3s ease; /* Smooth font size transition */
+}
+
+nav.shrink .nav-links a {
+    font-size: 17px; 
+    transition: font-size 0.3s ease; /* Smooth font size transition for links */
+}
+
+nav.shrink .nav-links {
+    margin: 0 auto; 
+    gap: 20px; 
+    transition: margin-top 0.3s ease, gap 0.3s ease; 
+    padding-top: 5px;
+}
+
+/* Hide profile */
+nav.shrink .profile {
+    display: none;
+    transition: display 0.3s ease; /* Smooth hiding transition */
+}
+
+
 
 /* Buttons */
 button {
@@ -100,14 +255,41 @@ button:hover {
 }
 
 /* Footer */
+/* Footer */
 footer {
-    background-color: #222;
-    color: #fff;
+    background-color: #222; /* Black background */
+    color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-    border-top: 3px solid #ff4500;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-top: 4px solid #ff4500; /* Red-orange accent */
+    box-shadow: 0 -4px 10px rgba(255, 69, 0, 0.3); /* Soft red-orange glow */
 }
+
+/* Footer Content */
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Footer Links */
+footer a {
+    color: #ff4500; /* Red-orange accent */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+footer a:hover {
+    color: #ff6347; /* Slightly lighter red-orange */
+    text-shadow: 0 0 10px rgba(255, 99, 71, 0.8); /* Soft glow effect */
+}
+
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -122,82 +304,96 @@ footer {
     }
 }
 
-/* Page Title under Navigation */
-.nav-page-title {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #222; /* Match the navbar */
-    color: #ffffff; /* White text */
-    font-size: 20px;
-    font-weight: 600;
-    position: relative;
-    transition: opacity 0.5s ease, max-height 0.5s ease;
-    max-height: 50px; /* Default height */
-    overflow: hidden; /* Prevents content from showing when max-height is 0 */
-}
-
-/* Centered Underline */
-.underline {
-    width: 120px; 
-    height: 5px; 
-    background-color: #ff4500; /* Red-orange underline */
-    border-radius: 5px;
-    margin: 0 auto; /* Center the underline */
-    transition: opacity 0.5s ease;
-}
-
-.hidden-underline {
-    opacity: 0;
-}
-
-.hidden-title {
-    opacity: 0;
-    max-height: 0;
-}
 
 
 /* MAIN PAGE */
-.intro-container {
+
+/*ABOUT ME DESCRIPTION*/
+/* About Me Section */
+.about-me {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 40px 10%;
-    margin-top: 180px;
+    justify-content: space-between;
+    padding: 40px;
+    margin: 160px auto 0;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 1200px; /* Increased max-width for better spacing */
+    background: rgba(0, 0, 0, 0.7);
+    text-align: left;
 }
 
+.about-me h2 {
+    font-size: 2.5rem; /* Larger font size for heading */
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ff4500;
+}
+
+.about-me ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+    line-height: 1.8; /* Increased line height for better readability */
+    margin-bottom: 20px;
+}
+
+.about-me ul li::before {
+    content: "\2713"; /* Checkmark */
+    color: #ff4500;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.about-me p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.about-me a {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    color: #000; 
+    background: #ff4500;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.about-me a:hover {
+    background: #ee4102;
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Text Section */
 .text-section {
     flex: 1;
-    color: #ffffff; 
-    font-size: 1.8rem; 
+    max-width: 600px;
+    margin-right: 40px; /* Space between text and image */
 }
 
-.text-section h2 {
-    font-weight: 600;
-}
-
+/* Image Section */
 .image-section {
     flex: 1;
+    max-width: 400px; /* Adjust based on your design */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.image-section img {
-    width: 80%; 
-    height: 350px; 
-    object-fit: cover; 
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-}
-
+/* Flip Container */
 /* Flip Container */
 .flip-container {
-    perspective: 1000px; /* Enables 3D effect */
-    width: 80%; /* Adjust based on your image */
-    height: 350px; /* Same as image height */
+    perspective: 1000px; 
+    width: 100%;
+    height: 350px;
 }
 
-/* Flipper (contains both front & back images) */
+/* Flipper */
 .flipper {
     position: relative;
     width: 100%;
@@ -206,8 +402,8 @@ footer {
     transition: transform 0.6s ease-in-out;
 }
 
-/* Front and Back Styles */
-.front, .back {
+/* Front Side */
+.front {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -216,24 +412,85 @@ footer {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Image inside Flip */
-.front img, .back img {
+.front img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
 
-/* Back Image Hidden Initially */
+/* Back Side - Black Background with Text */
 .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
     transform: rotateY(180deg); /* Start rotated */
 }
 
-/* Hover Effect: Flip */
-.flip-container:hover .flipper {
-    transform: rotateY(180deg); 
-    box-shadow: 0 8px 20px rgba(255, 99, 71, 0.6); 
+/* Back Content Styling */
+.back-content {
+    max-width: 80%;
 }
+
+/* Hover Effect - Flip Animation */
+.flip-container:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-me {
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 100px;
+    }
+
+    .text-section {
+        margin-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .image-section {
+        max-width: 100%;
+    }
+
+    .about-me h2 {
+        font-size: 2rem;
+    }
+
+    .about-me ul, .about-me p {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
+/*dont know if i need this one*/
+.intro-container {
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 40px 10%;
+    margin-top: 180px;
+}
+
+
 
 
 /* Text Section Styling */
@@ -320,7 +577,7 @@ footer {
 
 .study-work-block {
     width: 48%;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
     margin-bottom: 20px;
@@ -341,7 +598,7 @@ footer {
 }
 
 h2 {
-    color: #ff4500; /* Red-orange color */
+    color: #ff4500; 
     border-bottom: 2px solid #ff4500;
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -366,10 +623,14 @@ h4 em {
     color: #ccc;
 }
 
-ul {
+.job ul {
     padding-left: 20px;
     margin-bottom: 20px;
     list-style-type: disc;
+}
+
+.degree li {
+    margin-left: 22px;
 }
 
 li {
@@ -859,6 +1120,7 @@ li {
     text-transform: uppercase;
     margin-bottom: 20px;
     color: #ff4500;
+    border-bottom: 2px solid #ff4500;
 }
 
 .work-content {
