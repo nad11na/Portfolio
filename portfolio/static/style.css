@@ -24,7 +24,8 @@ body {
 
 .main-content {
     margin-top: 140px; 
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /* Navigation Bar */
@@ -1135,11 +1136,12 @@ li {
     color: white;
     padding: 40px 20px; /* Add padding for spacing */
     box-sizing: border-box;
-    margin-top: 130px;
+    margin-top: 50px;
+    border-radius: 20px;
 }
 
 .experience-summary-content {
-    max-width: 1200px; /* Increased width to 1200px */
+    max-width: 1200px; 
     text-align: left;
     width: 100%; /* Ensure it takes full width up to 1200px */
 }
@@ -1154,11 +1156,17 @@ li {
 }
 
 .experience-summary p {
-    font-size: 1.1rem; /* Comfortable reading size */
-    line-height: 1.8; /* Improve readability */
-    margin-bottom: 20px; /* Space between paragraphs */
-    color: #ccc; /* Light gray for better contrast */
+    font-size: 1.2rem; 
+    line-height: 1.8; 
+    margin-bottom: 20px; 
+    color: #ccc;
 }
+
+.experience-summary-content {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -1178,14 +1186,14 @@ li {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #1a1a1a;
     color: white;
     padding: 60px 20px;
     box-sizing: border-box;
+    margin-top: 140px;
 }
 
 .project-showcase-content {
-    max-width: 1200px;
+    max-width: 1100px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1279,6 +1287,19 @@ li {
     color: #ff4500;
     font-weight: 600;
 }
+
+/* Slideshow Container */
+.slideshow-container2 {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
 
 @media (max-width: 768px) {
     .project-description {

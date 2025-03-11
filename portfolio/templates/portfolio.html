@@ -6,24 +6,11 @@
 {% endblock %}
 
 {% block content %}
-<section id="experience-summary" class="experience-summary">
-    <div class="experience-summary-content">
-        <h2>My Journey in Computer Science</h2>
-        <p>
-            Much of my experience in computer science has been shaped by my academic journey and practical application through my personal projects. At university, I received training in software engineering, programming, 3D design, computer networking, and database administration. I gained a strong foundation in developing applied software systems, designing and managing databases, and utilizing modern information technologies for system development and integration.
-        </p>
-        <p>
-            Beyond academics, I applied my knowledge by developing STAYinTouch, a web-based information system designed to streamline operations for online language schools. Through this project, I worked extensively with Flask, SQLAlchemy, database management, and system architecture to create a platform for student management, lesson tracking, and communication. This hands-on experience deepened my understanding of web development, system design, and real-world database optimization while allowing me to integrate modern information processing and networking technologies.
-        </p>
-        <p>
-            My experience has equipped me with the ability to develop and manage computer systems, networks, and information resources while continuously refining my problem-solving and technical skills. I am eager to further explore innovative IT solutions and contribute to impactful projects.
-        </p>
-    </div>
-</section>
+
 <section id="project-showcase" class="project-showcase">
     <div class="project-showcase-content">
         <!-- Slideshow Section for Project Screenshots -->
-        <div class="slideshow-container">
+        <div class="slideshow-container2">
             <div class="slides">
                 <img src="{{ url_for('static', filename='images/screenshot1.png') }}" alt="Project Screenshot 1">
                 <img src="{{ url_for('static', filename='images/screenshot2.png') }}" alt="Project Screenshot 2">
@@ -112,5 +99,21 @@
         </div>
     </div>
 </section>
+
+<section id="experience-summary" class="experience-summary">
+    <div class="experience-summary-content">
+        <h2>My Journey in Computer Science</h2>
+        <p>
+            My journey in computer science started at university, where I learned software engineering, programming, 3D design, computer networking, and database administration. I developed strong skills in creating software systems, managing databases, and using modern technologies for system integration.
+        </p>
+        <p>
+            In addition to my studies, I applied my skills by developing STAYinTouch, a web-based system for online language schools. This project involved working with Flask, SQLAlchemy, and database management to build a platform for student management and lesson tracking. It gave me valuable hands-on experience in web development, system design, and database optimization.
+        </p>
+        <p>
+            These experiences have helped me build a solid foundation in managing computer systems and networks. I look forward to exploring new IT solutions and contributing to impactful projects.
+        </p>
+    </div>
+</section>
+
 
 {% endblock %}

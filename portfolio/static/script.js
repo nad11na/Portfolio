@@ -313,3 +313,24 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(element);
     });
 });
+
+
+//jorney
+window.addEventListener("load", function() {
+    // Create an intersection observer to detect when the section is in view
+    var observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            // Check if the element is in view
+            if (entry.isIntersecting) {
+                var content = entry.target;
+                content.style.opacity = 1; // Trigger the fade-in effect
+                observer.unobserve(content); // Stop observing once it's in view
+            }
+        });
+    }, { threshold: 0.5 }); // Trigger when 50% of the section is in view
+
+    // Start observing the content
+    var content = document.querySelector(".experience-summary-content");
+    observer.observe(content);
+});
+
