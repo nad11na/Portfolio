@@ -1,0 +1,196 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="about-me">
+    <div class="text-section">
+        
+        <ul>
+            <li><strong>Backend Development:</strong> Python (Flask, SQLAlchemy), Java, JavaScript</li>
+            <li><strong>Database Management:</strong> SQL, SQLite, Flask-SQLAlchemy</li>
+            <li><strong>System Integration & API Development</strong></li>
+            <li><strong>Data Analysis & Visualization:</strong> Pandas, Matplotlib</li>
+            <li><strong>Problem-Solving & Technical Troubleshooting</strong></li>
+        </ul>
+        <p>Passionate about creating <strong>seamless digital experiences</strong> to improve <strong>education through technology</strong>.</p>
+        <a href="{{ url_for('main.about') }}">About Me</a>
+    </div>
+
+    <div class="image-section">
+        <div class="flip-container">
+            <div class="flipper">
+                <!-- Front Side (Your Photo) -->
+                <div class="front">
+                    <img src="{{ url_for('static', filename='images/my_photo.jpg') }}" alt="Nadiia Sierova Front">
+                </div>
+    
+                <!-- Back Side (Black Background with Text) -->
+                <div class="back">
+                    <div class="back-content">
+                        🚀 <strong>IT Professional | Backend Developer | System Designer</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+    <div class="text-section1">
+        <div class="upper-text">
+            COMPUTER SCIENCE GRADUATE | SUMY STATE UNIVERSITY, SUMY, UKRAINE
+        </div>
+        <div class="lower-text">
+            Sumy State University is one of the best higher education institutions of Ukraine, located in Sumy. About 12,000 people study at the university in various forms of education at elementary, bachelor's, master's, educational-scientific, and scientific levels in 55 specialties from 23 fields of knowledge. About 1,900 foreign students from almost 50 countries are getting their education there.
+            In terms of the number of prize places in All-Ukrainian contests of student scientific works, Sumy State University has the highest figure, and in terms of the number of prize places in All-Ukrainian Olympiads in academic disciplines, areas of training, and specialties, Sumy State University is among the leaders among universities of Ukraine.
+            Sumy State University is included in the Times Higher Education World University Rankings (THE) world ranking of research universities in the 501-600 position and in the 1-2 position among Ukrainian universities.
+        </div>
+        <div class="website-button">
+            <a href="https://int.sumdu.edu.ua/en/" target="_blank">
+                <button>Sumy State University Website</button>
+            </a>
+        </div>
+    </div>
+    <section id="study_work" class="study-work-container">
+        <div class="study-work-block experience">
+            <h2>Work Experience</h2>
+            
+            <div class="job">
+                <h3>[2024] – [Present]</h3>
+                <h4>STAYinTouch Project - Full-Stack Developer</h4>
+                <ul>
+                    <li>Developed and maintained both frontend and backend of the STAYinTouch online platform.</li>
+                    <li>Designed and implemented the database using Flask-SQLAlchemy for efficient data management.</li>
+                    <li>Created dynamic, user-friendly web pages with HTML, CSS, JavaScript, and Flask.</li>
+                    <li>Built and optimized APIs for user and admin communication, ensuring smooth system performance.</li>
+                    <li>Implemented secure user authentication and authorization.</li>
+                    <li>Developed data-driven dashboards for admins to track student progress and lesson histories.</li>
+                    <li>Ensured system scalability, performance, and security, enhancing the user experience.</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <h3>[2024] – [2025]</h3>
+                <h4>Axcis Education - Primary School TA</h4>
+                <ul>
+                    <li>Provided one-on-one support to SEN students, adapting lesson plans and using digital tools to enhance learning.</li>
+                    <li>Monitored student progress against targets and fostered positive behaviour.</li>
+                    <li>Assisted the lead teacher with daily classroom activities, including setting up educational materials, managing classroom resources, and facilitating instructional activities.</li>
+                    <li>Supported students in developing positive behaviour and social skills.</li>
+                    <li>Adapted and delivered educational materials and activities to meet the diverse needs of students, ensuring inclusivity and effective learning experiences.</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <h3>[2019] – [2024]</h3>
+                <h4>English Tutor</h4>
+                <ul>
+                    <li>Taught English to children in groups and individual lessons.</li>
+                    <li>Prepared curricula and daily lessons.</li>
+                    <li>Created an atmosphere that is ideal for teaching children of a particular age.</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <h3>[2021] – [2022]</h3>
+                <h4>Putyvl Educational Complex - English & IT Teacher</h4>
+                <ul>
+                    <li>Developed and delivered lessons on programming (Python, HTML/CSS, JavaScript), using interactive teaching methods such as multimedia presentations and hands-on coding exercises.</li>
+                    <li>Provided technical support for software and hardware issues, fostering a seamless learning experience.</li>
+                    <li>Conducted small group sessions to reinforce lesson concepts and provide personalised support, addressing diverse learning needs and enhancing student understanding.</li>
+                    <li>Employed interactive teaching methods, incorporating coding projects, multimedia presentations, and hands-on exercises to enhance engagement and understanding in both English and IT.</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <h3>[2020] – [2021]</h3>
+                <h4>Sumy Specialized School №7 - Primary School Teacher</h4>
+                <ul>
+                    <li>Delivered daily lessons in core subjects, using diverse teaching methods and integrating technology to engage students.</li>
+                    <li>Monitored progress through assessments and worked closely with parents and staff to support student development.</li>
+                    <li>Implemented effective classroom management strategies and contributed to curriculum development.</li>
+                    <li>Attended professional development to stay updated with the latest teaching strategies and organised after-school programs to enrich student learning.</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <h3>[2017] – [2018]</h3>
+                <h4>Putyvl Educational Complex - Kindergarten/Nursery Teacher</h4>
+                <ul>
+                    <li>Planned and carried out educational and recreational activities in accordance with the program.</li>
+                    <li>Monitored the protection of life and strengthening the health of pupils.</li>
+                    <li>Contributed to the socialization of preschoolers.</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="study-work-block education">
+            <h2>Education</h2>
+        
+            <div class="degree">
+                <h3>[2023] – [2025]</h3>
+                <h4>Sumy State University, Ukraine</h4>
+                <h4><em>Master's degree in Computer Science</em></h4>
+                <ul>
+                    
+                    <li><strong>Specialisation:</strong> Information Technology Design</li>
+                    <li><strong>Core Competencies:</strong> Software Engineering, Human-Computer Interaction, IT Project Management, Data Structures & Algorithms, Database Systems, and Network Security.</li>
+                    <li><strong>Technical Skills:</strong> Python, Java, C++, SQL, Agile and Scrum methodologies, system architecture design, and database management.</li>
+                    <li><strong>Relevant Experience:</strong> Applied modern information technologies to software development and system design. Designed and operated knowledge bases, databases, and computer networks. Developed integrated systems for specialised modelling and design using advanced telecommunication networks and modern computing technologies.</li>
+                </ul>
+            </div>
+        
+            <div class="degree">
+                <h3>[2021] – [2022]</h3>
+                <h4>Sumy State University, Ukraine</h4>
+                <h4><em>Master's degree in Philology</em></h4>
+                <ul>
+                    
+                    <li><strong>Specialisation:</strong> Germanic languages and literatures (including translation) - first English</li>
+                    <li><strong>Languages:</strong> English (primary), German (secondary), and additional study of Latin.</li>
+                    <li><strong>Key Skills:</strong> Expertise in linguistics, translation studies, and legal translation (oral and written), with a focus on Germanic languages.</li>
+                    <li><strong>Practical Application:</strong> Applied translation studies to both legal and business contexts, with a focus on international communication.</li>
+                    <li><strong>Business Communication:</strong> Developed skills in business communication strategies for international meetings, negotiations, and conferences.</li>
+                </ul>
+            </div>
+        
+            <div class="degree">
+                <h3>[2018] – [2021]</h3>
+                <h4>Sumy State University, Ukraine</h4>
+                <h4><em>Bachelor's degree in Philology</em></h4>
+                <ul>
+                    
+                    <li><strong>Specialisation:</strong> Germanic languages and literatures (including translation) - first English</li>
+                    <li><strong>Languages:</strong> English (primary), German (secondary), and additional study of Latin.</li>
+                    <li><strong>Key Skills:</strong> Expertise in linguistics, translation studies, and legal translation (oral and written), with a focus on Germanic languages.</li>
+                    <li><strong>Key Competencies:</strong> Linguistics, translation, intercultural communication, and language teaching methodologies.</li>
+                    <li><strong>Relevant Experience:</strong> Developed strong written and spoken language skills, conducted linguistic research, and translated various types of texts.</li>
+                </ul>
+            </div>
+        
+            <div class="degree">
+                <h3>[2014] – [2018]</h3>
+                <h4>Putyvl Pedagogical College, Ukraine</h4>
+                <h4><em>Associate degree in Pedagogy</em></h4>
+                <ul>
+                    
+                    <li><strong>Focus:</strong> Teaching methodologies, child psychology, and educational sciences.</li>
+                    <li><strong>Teaching Experience:</strong> Gained hands-on experience in classroom management, lesson planning, and student assessment.</li>
+                    <li><strong>Skills Developed:</strong> Effective communication, mentoring, curriculum development, and student engagement strategies.</li>
+                </ul>
+            </div>
+        </div>
+        
+    </section>
+
+    <div class="text-section">
+            <h2>Nadiia Sierova, Programmer from London</h2>
+    </div>
+{% endblock %}
