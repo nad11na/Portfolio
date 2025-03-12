@@ -95,7 +95,6 @@ nav {
     justify-content: center;
     margin-top: 10px;
     transition: margin-top 0.3s ease, gap 0.3s ease;
-    max-height: 50px; /* Prevent overflow */
     overflow: hidden; /* Hide overflow */
 }
 
@@ -238,6 +237,200 @@ nav.shrink .profile {
     display: none;
     transition: display 0.3s ease; /* Smooth hiding transition */
 }
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    color: #fff;
+    
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    nav {
+        padding: 10px 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: relative; /* Ensures the toggle positions relative to this */
+    }
+
+    .profile {
+        text-align: center;
+    }
+
+    /* Menu toggle stays on top */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 190px; 
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 26px;
+        color: #fff;
+        cursor: pointer;
+        z-index: 1100; /* Higher than nav-links */
+        text-align: center;
+    }
+
+    /* Navigation links */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        background: #222;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        
+        /* Smooth dropdown effect */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    /* When active, expand the menu */
+    .nav-links.active {
+        max-height: 300px; /* Adjust height based on content */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* Push content below */
+    .nav-expanded {
+        margin-top: 300px; /* Adjust this value to fit the menu height */
+        transition: margin-top 0.3s ease-in-out;
+    }
+
+    .social-media {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: relative; /* Ensures the toggle positions relative to this */
+    }
+
+    .profile {
+        text-align: center;
+    }
+
+    
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 190px; 
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 26px;
+        color: #fff;
+        cursor: pointer;
+        z-index: 1100; 
+        text-align: center;
+    }
+
+    /* Navigation links */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        background: #222;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        
+        /* Smooth dropdown effect */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    /* When active, expand the menu */
+    .nav-links.active {
+        max-height: 300px; /* Adjust height based on content */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* Push content below */
+    .nav-expanded {
+        margin-top: 300px; /* Adjust this value to fit the menu height */
+        transition: margin-top 0.3s ease-in-out;
+    }
+
+    .social-media {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 135px; 
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 26px;
+        color: #fff;
+        cursor: pointer;
+        z-index: 1100; 
+        text-align: center;
+    }
+    .profile-photo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile h1 {
+        font-size: 16px;
+    }
+
+    .profile p {
+        font-size: 11px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .social-icon {
+        font-size: 20px;
+    }
+}
+
 
 
 
@@ -442,6 +635,7 @@ footer a:hover {
 /* Back Content Styling */
 .back-content {
     max-width: 80%;
+    margin-top: 10px;
 }
 
 /* Hover Effect - Flip Animation */
@@ -454,11 +648,83 @@ footer a:hover {
 
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .main-content {
+        margin-top: 0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 40px;
+    }
+
     .about-me {
-        flex-direction: column;
+        padding: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .flip-container {
+        height: 400px; 
+        width: 300px; 
+        display: flex;
+        justify-content: center;
+    }
+
+    .flipper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .front,
+    .back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+    }
+
+    .front img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image fills the container */
+        border-radius: 10px; /* Optional: Match the style */
+    }
+
+    .back {
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: black;
+        color: white;
+        text-align: center;
+    }
+
+    .flip-container:hover .flipper {
+        transform: rotateY(180deg);
+        box-shadow: 0 8px 20px rgba(255, 99, 71, 0.6); 
+        border-radius: 15px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* Mobile View */
+    .main-content {
+        margin-top: 0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        transition: margin-top 0.3s ease-in-out;
+        padding-left: 0;
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: column; /* Stack text and image vertically */
         padding: 20px;
-        margin-top: 100px;
+        margin-bottom: 10px;
     }
 
     .text-section {
@@ -469,6 +735,9 @@ footer a:hover {
 
     .image-section {
         max-width: 100%;
+        text-align: center;
+        margin-top: 20px; 
+        
     }
 
     .about-me h2 {
@@ -476,22 +745,102 @@ footer a:hover {
     }
 
     .about-me ul, .about-me p {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+
+    .flip-container {
+        height: auto; 
+    }
+
+    .back {
+        font-size: 1rem;
+    }
+
+    .about-me a {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .image-section img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Disable flip effect for mobile */
+    .flip-container:hover .flipper {
+        transform: rotateY(180deg);
+        box-shadow: 0 8px 20px rgba(255, 99, 71, 0.6); 
+        border-radius: 15px;
     }
 }
 
 
 
+@media (max-width: 480px) {
+    /* Mobile View (Small Screens) */
+    .main-content {
+        margin-top: 0px;
+        padding-top: 15px; /* Slightly reduced padding for small screens */
+        padding-bottom: 15px; /* Slightly reduced padding for small screens */
+        transition: margin-top 0.3s ease-in-out;
+        padding-left: 0;
+    }
 
-/*dont know if i need this one*/
-.intro-container {
-    display: flex;
-    flex-direction: column; /* Stack the items vertically */
-    justify-content: center;
-    align-items: center;
-    padding: 40px 10%;
-    margin-top: 180px;
+    .about-me {
+        display: flex;
+        flex-direction: column; /* Stack text and image vertically */
+        padding: 15px; /* Reduced padding for smaller screens */
+        margin-bottom: 10px;
+    }
+
+    .text-section {
+        margin-right: 0;
+        margin-bottom: 20px; /* Reduced bottom margin */
+        text-align: center;
+    }
+
+    .image-section {
+        max-width: 100%;
+        text-align: center;
+        margin-top: 15px; /* Reduced margin */
+    }
+
+    .about-me h2 {
+        font-size: 1.5rem; /* Smaller font size for small screens */
+    }
+
+    .about-me ul, .about-me p {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .flip-container {
+        height: auto; 
+    }
+
+    .back {
+        font-size: 0.9rem; /* Smaller font size for back content */
+    }
+
+    .about-me a {
+        font-size: 0.9rem; /* Smaller font size for the link */
+        padding: 6px 14px; /* Reduced padding */
+    }
+
+    .image-section img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px; /* Optional: rounded corners for small screens */
+    }
+
+    /* Disable flip effect for mobile */
+    .flip-container:hover .flipper {
+        transform: rotateY(180deg);
+        box-shadow: 0 8px 20px rgba(255, 99, 71, 0.6); 
+        border-radius: 15px;
+    }
 }
+
+
 
 
 
@@ -564,6 +913,74 @@ footer a:hover {
 
 .website-button a {
     text-decoration: none;
+}
+
+
+/* Mobile Adjustments */
+@media (max-width: 1024px) {
+    .text-section1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: auto; 
+        min-height: 50vh; 
+        padding: 40px 20px; 
+    }
+}
+
+
+@media (max-width: 768px) {
+
+
+    .upper-text {
+        font-size: 1.3rem; 
+    }
+
+    .lower-text {
+        font-size: 1rem; 
+        margin-bottom: 20px; 
+        width: 90%; 
+        padding: 0 15px; 
+    }
+
+    .website-button button {
+        font-size: 14px; 
+        padding: 10px 18px; 
+    }
+
+    .text-section1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        min-height: 40vh; 
+        padding: 30px 15px; 
+        margin-top: 500px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Small Mobile Adjustments */
+@media (max-width: 480px) {
+    .upper-text {
+        font-size: 1.2rem; /* Smaller font size for small mobiles */
+    }
+
+    .lower-text {
+        font-size: 0.9rem; /* Even smaller font size */
+        margin-bottom: 15px; /* Reduced bottom margin for small screens */
+        width: 85%; /* More width space on small screens */
+        padding: 0 10px; /* Reduced padding for small screens */
+    }
+
+    .website-button button {
+        font-size: 13px; /* Adjust button font size for small mobile */
+        padding: 8px 15px; /* Adjust padding to fit small screens */
+    }
 }
 
 
@@ -777,6 +1194,60 @@ li {
     transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
+/* Tablet View (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .about-container {
+        padding: 30px 5%;
+        gap: 30px;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    #slideshow {
+        max-width: 500px;
+    }
+}
+
+/* Mobile View (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 5%;
+        margin-top: 100px;
+    }
+
+    .about-left, .about-right {
+        width: 100%;
+        flex: none;
+    }
+
+    .about-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #slideshow {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .about-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .next-arrow {
+        right: 10px;
+        font-size: 1.8rem;
+        width: 40px;
+        height: 40px;
+    }
+}
 
 
 /*dance*/
@@ -929,7 +1400,49 @@ li {
     cursor: pointer;
 }
 
+/* Adjustments for Tablet */
+@media (max-width: 1024px) {
+    .container2 {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 5%;
+    }
+}
 
+/* Mobile View */
+@media (max-width: 768px) {
+    .container2 {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 5%;
+        gap: 20px;
+    }
+
+    .left-side,
+    .personal-dance {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-box {
+        order: 1; /* Text appears above video */
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .video-box {
+        order: 2; /* Video appears below text */
+        max-width: 100%;
+    }
+
+    .custom-video {
+        max-width: 100%;
+    }
+
+    .video-controls {
+        padding: 8px;
+    }
+}
 
 
 /*education*/

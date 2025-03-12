@@ -334,3 +334,17 @@ window.addEventListener("load", function() {
     observer.observe(content);
 });
 
+//toggle mobile
+function toggleMenu() {
+    let navLinks = document.querySelector('.nav-links');
+    let mainContent = document.querySelector('.main-content'); // Adjust based on your page structure
+
+    navLinks.classList.toggle('active');
+
+    // Push content down when menu is open
+    if (navLinks.classList.contains('active')) {
+        mainContent.classList.add('nav-expanded');
+    } else {
+        mainContent.classList.remove('nav-expanded');
+    }
+}
