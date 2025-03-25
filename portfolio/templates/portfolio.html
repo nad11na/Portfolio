@@ -114,7 +114,6 @@
                 <img src="{{ url_for('static', filename='images/tvii_sad6.png') }}" alt="Tvii_Sad Screenshot 6">
             </div>
             
-
             <!-- Navigation Arrows -->
             <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
             <button class="next" onclick="moveSlide(1)">&#10095;</button>
@@ -133,19 +132,19 @@
         <div class="project-description">
             <h2>Tvii_Sad Project</h2>
             <p>
-                Tvii_Sad is an innovative e-commerce platform designed to bring nature closer to people by offering a wide variety of plants, gardening tools, and accessories. The system provides a seamless shopping experience, helping users discover, purchase, and learn about plants while streamlining order management for administrators.
+                Tvii_Sad is a full-stack web application designed to manage an online store specializing in plant, berry, and vegetable seedlings. This project demonstrates my skills in backend and frontend development, database management, and user authentication.
             </p>
 
             <!-- Key Features Section -->
             <div class="text-block">
                 <p><strong>Key features include:</strong></p>
                 <ul>
-                    <li><strong>Product Catalog:</strong> A beautifully designed catalog displaying a variety of plants, pots, and gardening tools with detailed descriptions.</li>
-                    <li><strong>Shopping Cart & Checkout:</strong> A user-friendly cart system with secure payment options for a smooth purchasing experience.</li>
-                    <li><strong>Order Management System:</strong> Allows admins to track orders, update statuses, and manage customer interactions.</li>
-                    <li><strong>Plant Care Guides:</strong> Provides educational content on plant maintenance, watering schedules, and sunlight requirements.</li>
-                    <li><strong>Customer Reviews & Ratings:</strong> Enables buyers to leave feedback and rate products for better user experience.</li>
-                    <li><strong>Authentication & User Profiles:</strong> Secure login system with personalized order history and wishlist features.</li>
+                    <li><strong>Backend Architecture:</strong> Built using Flask, with modular components for scalability and maintainability.</li>
+                    <li><strong>Database Management:</strong> Utilizes Flask-SQLAlchemy with an SQLite database; Alembic is used for migrations.</li>
+                    <li><strong>Authentication & Authorization:</strong> Secure login system implemented with Flask-Login, including password hashing.</li>
+                    <li><strong>Order Processing System:</strong> Admin panel for tracking orders, managing stock, and automating email notifications.</li>
+                    <li><strong>Dynamic Frontend:</strong> JavaScript-enhanced UI for an interactive shopping experience.</li>
+                    <li><strong>Security Measures:</strong> Includes form validation, CSRF protection, and environment variable management using dotenv.</li>
                 </ul>
             </div>
 
@@ -156,27 +155,25 @@
                     <li><strong>Backend:</strong> Python, Flask, Flask-SQLAlchemy, Flask-Migrate, Flask-Login</li>
                     <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
                     <li><strong>Database:</strong> SQLite with SQLAlchemy ORM</li>
-                    <li><strong>Additional Tools:</strong> Alembic for database migrations, dotenv for environment variables</li>
+                    <li><strong>Additional Tools:</strong> Alembic (database migrations), dotenv (environment variables), Flask-Mail (email notifications)</li>
                 </ul>
             </div>
 
-            <!-- Development Highlights Section -->
+            <!-- Challenges & Solutions Section -->
             <div class="text-block">
-                <p><strong>Development Highlights:</strong></p>
+                <p><strong>Challenges & Solutions:</strong></p>
                 <ul>
-                    <li>Built an intuitive product catalog with advanced filtering and search options.</li>
-                    <li>Implemented a secure and efficient shopping cart and checkout process.</li>
-                    <li>Developed an admin dashboard for real-time order tracking and inventory management.</li>
-                    <li>Integrated an email notification system for order confirmations and promotions.</li>
+                    <li><strong>Efficient Querying:</strong> Optimized database queries to reduce load times and improve performance.</li>
+                    <li><strong>Secure Authentication:</strong> Implemented Flask-Login with hashed passwords for user security.</li>
+                    <li><strong>Seamless User Experience:</strong> Built a responsive frontend with interactive JavaScript elements for a smooth shopping experience.</li>
                 </ul>
             </div>
 
-            <!-- Impact Section -->
             <div class="text-block">
-                <p><strong>Impact:</strong></p>
-                <p>
-                    Tvii_Sad connects plant lovers with quality greenery while simplifying the shopping process. With a focus on user experience, educational resources, and seamless order management, the platform fosters a deeper appreciation for plants and sustainable living.
-                </p>
+                <p><strong>Link:</strong></p>
+                <div class="link-container">
+                    <a href="https://tvii-sad.onrender.com/" class="styled-link">https://tvii-sad.onrender.com/</a>
+                </div>                
             </div>
         </div>
     </div>

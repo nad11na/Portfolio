@@ -1843,4 +1843,16 @@ li {
     }
 }
 
+/*link*/
 
+
+.styled-link {
+    color: #0057b5;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+.styled-link:hover {
+    text-decoration: underline;
+}
