@@ -207,16 +207,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const slides = document.querySelectorAll(".slides img");
         const dots = document.querySelectorAll(".dot");
 
-        // Debugging: Log the number of slides and dots
-        console.log("Slides found:", slides.length);
-        console.log("Dots found:", dots.length);
-
-        // Prevent running if no slides or dots exist
-        if (slides.length === 0 || dots.length === 0) {
-            console.error("No slides or dots found.");
-            return;
-        }
-
         // Hide all slides
         slides.forEach((slide) => {
             slide.style.display = "none";
@@ -231,41 +221,42 @@ document.addEventListener("DOMContentLoaded", function () {
         if (slideIndex >= slides.length) slideIndex = 0;
         if (slideIndex < 0) slideIndex = slides.length - 1;
 
-        // Show the current slide and activate the corresponding dot
+        // Show the current slide
         slides[slideIndex].style.display = "block";
         dots[slideIndex].classList.add("active");
     }
 
-    function moveSlide(n) {
-        slideIndex += n;
+    // Handle slide navigation
+    function moveSlide(step) {
+        slideIndex += step;
         showSlides();
     }
 
-    function currentSlide(n) {
-        slideIndex = n - 1;
+    function currentSlide(index) {
+        slideIndex = index - 1;  // -1 because your dots are 1-based index
         showSlides();
     }
 
-    // Initialize the slideshow
+    // Call showSlides initially to display the first slide
     showSlides();
 
-    // Add event listeners to navigation arrows
-    const prevButton = document.querySelector(".prev");
-    const nextButton = document.querySelector(".next");
+    // Bind the moveSlide function to the buttons
+    document.querySelector(".prev").addEventListener("click", function() {
+        moveSlide(-1);
+    });
 
-    if (prevButton && nextButton) {
-        prevButton.addEventListener("click", () => moveSlide(-1));
-        nextButton.addEventListener("click", () => moveSlide(1));
-    } else {
-        console.error("Navigation buttons not found.");
-    }
+    document.querySelector(".next").addEventListener("click", function() {
+        moveSlide(1);
+    });
 
-    // Add event listeners to dots
-    const dots = document.querySelectorAll(".dot");
-    dots.forEach((dot, index) => {
-        dot.addEventListener("click", () => currentSlide(index + 1));
+    // Bind the dots to navigate to specific slides
+    document.querySelectorAll(".dot").forEach((dot, index) => {
+        dot.addEventListener("click", function () {
+            currentSlide(index + 1);  // +1 because dots are 1-based index
+        });
     });
 });
+
 
 
 //animation work
@@ -315,6 +306,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+
+
+
 //jorney
 window.addEventListener("load", function() {
     // Create an intersection observer to detect when the section is in view
@@ -348,3 +343,55 @@ function toggleMenu() {
         mainContent.classList.remove('nav-expanded');
     }
 }
+
+
+//tvii_sad
+let slideIndex = 1;
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Initialize slide index
+    showSlides(slideIndex);
+
+    // Function to change slides
+    window.moveSlide = function(n) {
+        showSlides(slideIndex += n);
+    };
+
+    // Function to show a specific slide
+    window.currentSlide = function(n) {
+        showSlides(slideIndex = n);
+    };
+
+    // Function to display the slide based on the current slide index
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("slides1")[0]?.getElementsByTagName("img");
+        let dots = document.getElementsByClassName("dot");
+
+        if (!slides) {
+            console.error('Slides container not found');
+            return;
+        }
+
+        // Wrap around if the index is out of bounds
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+
+        // Hide all slides
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        // Remove the active class from all dots
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        // Display the current slide and mark the active dot
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+});

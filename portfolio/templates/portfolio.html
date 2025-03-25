@@ -100,6 +100,90 @@
     </div>
 </section>
 
+
+<section id="project-showcase" class="project-showcase">
+    <div class="project-showcase-content">
+        <!-- Slideshow Section for Project Screenshots -->
+        <div class="slideshow-container2">
+            <div class="slides1">
+                <img src="{{ url_for('static', filename='images/tvii_sad1.png') }}" alt="Tvii_Sad Screenshot 1">
+                <img src="{{ url_for('static', filename='images/tvii_sad2.png') }}" alt="Tvii_Sad Screenshot 2">
+                <img src="{{ url_for('static', filename='images/tvii_sad3.png') }}" alt="Tvii_Sad Screenshot 3">
+                <img src="{{ url_for('static', filename='images/tvii_sad4.png') }}" alt="Tvii_Sad Screenshot 4">
+                <img src="{{ url_for('static', filename='images/tvii_sad5.png') }}" alt="Tvii_Sad Screenshot 5">
+                <img src="{{ url_for('static', filename='images/tvii_sad6.png') }}" alt="Tvii_Sad Screenshot 6">
+            </div>
+            
+
+            <!-- Navigation Arrows -->
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+
+            <!-- Progress Dots -->
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+
+        <div class="project-description">
+            <h2>Tvii_Sad Project</h2>
+            <p>
+                Tvii_Sad is an innovative e-commerce platform designed to bring nature closer to people by offering a wide variety of plants, gardening tools, and accessories. The system provides a seamless shopping experience, helping users discover, purchase, and learn about plants while streamlining order management for administrators.
+            </p>
+
+            <!-- Key Features Section -->
+            <div class="text-block">
+                <p><strong>Key features include:</strong></p>
+                <ul>
+                    <li><strong>Product Catalog:</strong> A beautifully designed catalog displaying a variety of plants, pots, and gardening tools with detailed descriptions.</li>
+                    <li><strong>Shopping Cart & Checkout:</strong> A user-friendly cart system with secure payment options for a smooth purchasing experience.</li>
+                    <li><strong>Order Management System:</strong> Allows admins to track orders, update statuses, and manage customer interactions.</li>
+                    <li><strong>Plant Care Guides:</strong> Provides educational content on plant maintenance, watering schedules, and sunlight requirements.</li>
+                    <li><strong>Customer Reviews & Ratings:</strong> Enables buyers to leave feedback and rate products for better user experience.</li>
+                    <li><strong>Authentication & User Profiles:</strong> Secure login system with personalized order history and wishlist features.</li>
+                </ul>
+            </div>
+
+            <!-- Technologies Used Section -->
+            <div class="text-block">
+                <p><strong>Technologies Used:</strong></p>
+                <ul>
+                    <li><strong>Backend:</strong> Python, Flask, Flask-SQLAlchemy, Flask-Migrate, Flask-Login</li>
+                    <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+                    <li><strong>Database:</strong> SQLite with SQLAlchemy ORM</li>
+                    <li><strong>Additional Tools:</strong> Alembic for database migrations, dotenv for environment variables</li>
+                </ul>
+            </div>
+
+            <!-- Development Highlights Section -->
+            <div class="text-block">
+                <p><strong>Development Highlights:</strong></p>
+                <ul>
+                    <li>Built an intuitive product catalog with advanced filtering and search options.</li>
+                    <li>Implemented a secure and efficient shopping cart and checkout process.</li>
+                    <li>Developed an admin dashboard for real-time order tracking and inventory management.</li>
+                    <li>Integrated an email notification system for order confirmations and promotions.</li>
+                </ul>
+            </div>
+
+            <!-- Impact Section -->
+            <div class="text-block">
+                <p><strong>Impact:</strong></p>
+                <p>
+                    Tvii_Sad connects plant lovers with quality greenery while simplifying the shopping process. With a focus on user experience, educational resources, and seamless order management, the platform fosters a deeper appreciation for plants and sustainable living.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
 <section id="experience-summary" class="experience-summary">
     <div class="experience-summary-content">
         <h2>My Journey in Computer Science</h2>
