@@ -27,18 +27,10 @@
                 <p>Dancing is my passion, and in my free time, I love to express myself through movement. Here’s a glimpse of me dancing:</p>
             </div>
             <div class="video-box">
-                <video id="video2" class="custom-video" poster="{{ url_for('static', filename='images/dance_thumbnail.png') }}">
-                    <source src="{{ url_for('static', filename='videos/dance.mp4') }}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                
-                <div class="play-button" onclick="togglePlayPause('video2')">▶</div>
-                <div class="video-controls">
-                    <button class="control-btn play-pause-btn" onclick="togglePlayPause('video2')">⏯</button>
-                    <button class="control-btn mute-btn" onclick="toggleMute('video2')">🔇</button>
-                    <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="1" oninput="setVolume('video2', this.value)">
-                    <input type="range" class="progress-bar" min="0" max="100" step="1" value="0" oninput="seekVideo('video2', this.value)">
-                    <button class="control-btn fullscreen-btn" onclick="toggleFullscreen('video2')">⛶</button>
+                <div class="video-box">
+                    <iframe src="https://drive.google.com/file/d/1eztkUBOM4YqcsIu4fNG14DHMJnsxeGdk/preview" 
+                        width="640" height="360" allowfullscreen>
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -49,19 +41,12 @@
                 <p>In 2019, I began organizing dance events in Sumy, bringing together over 100 participants to celebrate movement and community.</p>
             </div>
             <div class="video-box">
-                <video id="video1" class="custom-video" poster="{{ url_for('static', filename='images/dance_event_thumbnail.png') }}">
-                    <source src="{{ url_for('static', filename='videos/dance_event.mp4') }}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                
-                <div class="play-button" onclick="togglePlayPause('video1')">▶</div>
-                <div class="video-controls">
-                    <button class="control-btn play-pause-btn" onclick="togglePlayPause('video1')">⏯</button>
-                    <button class="control-btn mute-btn" onclick="toggleMute('video1')">🔇</button>
-                    <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="1" oninput="setVolume('video1', this.value)">
-                    <input type="range" class="progress-bar" min="0" max="100" step="1" value="0" oninput="seekVideo('video1', this.value)">
-                    <button class="control-btn fullscreen-btn" onclick="toggleFullscreen('video1')">⛶</button>
+                <div class="video-box">
+                    <iframe src="https://drive.google.com/file/d/1RFHsLxFW1TtEvELDvdGuzJzAj8zdm_q1/preview" 
+                        width="640" height="360" allowfullscreen>
+                    </iframe>
                 </div>
+               
             </div>
         </div>
     </div>
